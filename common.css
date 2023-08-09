@@ -1,0 +1,314 @@
+/* 헤더 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 0.3s;
+  background: transparent; /* 보더안보이게 */
+  border-bottom: 1px solid transparent; /* 보더안보이게 */
+  box-sizing: border-box;
+}
+header::before {
+  content: '';
+  width: 100%;
+  height: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  transition: height 0.4s ease-out;
+}
+header .headerWrap {
+  height: 70px;
+  position: relative;
+  text-align: center; /* 네브 중앙정렬 */
+  margin: 0 50px; /* 네브 중앙정렬 */
+}
+/* 헤더호버 */
+header.on,
+header.active {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+header.on::before {
+  border-bottom: 1px solid #eee;
+}
+header.active::before,
+header.active .headerWrap nav .gnb .depth2 {
+  height: 240px;
+}
+header.on .headerWrap .logo a,
+header.active .headerWrap .logo a {
+  background-image: url(images/logo_B.png);
+}
+header.on .headerWrap nav .gnb > li > a,
+header.active .headerWrap nav .gnb > li > a {
+  color: #000;
+}
+header.on .headerWrap .icoMenu .ico1 a,
+header.active .headerWrap .icoMenu .ico1 a {
+  background-position: 0 0;
+}
+header.on .headerWrap .icoMenu .ico2 a,
+header.active .headerWrap .icoMenu .ico2 a {
+  background-position: -20px 0;
+}
+
+header .headerWrap .logo {
+  position: absolute;
+  top: 23px;
+  left: 0;
+}
+header .headerWrap .logo a {
+  display: block;
+  width: 115px;
+  height: 22px;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100% auto; /* 풀프레임 비디오와 같이 풀프 백그라운드 */
+  transition: 0.3s;
+}
+header .headerWrap nav {
+  display: inline-block; /* 플룻레프트말고 인라인블럭으로 중앙정렬 */
+  text-align: left; /* 헤더렙 텍스트센터풀기 */
+}
+header .headerWrap nav .gnb {
+  font-size: 0;
+}
+header .headerWrap nav .gnb > li {
+  display: inline-block; /* 디스플레이플렉스 대신 */
+}
+header .headerWrap nav .gnb > li:not(.btn) {
+  vertical-align: top;
+}
+header .headerWrap nav .gnb > li > a {
+  display: block; /* 가로폭주기위해 */
+  height: 70px;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  padding-top: 24px;
+  transition: 0.3s;
+}
+/* 메뉴간격맞추기 */
+header .headerWrap nav .gnb > li:nth-child(1) > a {
+  width: 158px;
+}
+header .headerWrap nav .gnb > li:nth-child(2) > a {
+  width: 192px;
+}
+header .headerWrap nav .gnb > li:nth-child(3) > a {
+  width: 189px;
+}
+header .headerWrap nav .gnb > li:nth-child(4) > a {
+  width: 206px;
+}
+header .headerWrap nav .gnb > li > button.blue {
+  width: 126px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  background: #0b2c5f;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+/* 서브메뉴 */
+header .headerWrap nav .gnb .depth2 {
+  position: absolute;
+  height: 0;
+  box-sizing: border-box;
+  padding-top: 10px;
+  overflow: hidden;
+  transition: height 0.5s 0.02s;
+}
+header .headerWrap nav .gnb .depth2 li {
+  padding: 12px 0;
+}
+header .headerWrap nav .gnb .depth2 li a {
+  font-size: 15px;
+  color: #000;
+}
+/* header .headerWrap nav .gnb .depth2 li a:hover {
+  color: #0b2c5f;
+} */
+
+header .headerWrap .icoMenu {
+  display: flex;
+  position: absolute;
+  top: 23px;
+  right: 0;
+}
+header .headerWrap .icoMenu div a {
+  display: block;
+  width: 20px;
+  height: 24px;
+  background: url(images/ico-header-noti.png) no-repeat;
+  transition: 0.3s;
+}
+
+header .headerWrap .icoMenu .ico1 {
+  margin-right: 20px;
+}
+header .headerWrap .icoMenu .ico1 a {
+  background-position: 0 -24px;
+}
+header .headerWrap .icoMenu .ico2 a {
+  background-position: -20px -24px;
+}
+/* pc호버 */
+/* @media (hover: hover) {
+  header:hover:before {
+    border-bottom: 1px solid #eee ;
+  }
+  header:hover:before,
+  header:hover .headerWrap nav .gnb .depth2 {
+    height: 240px;
+  }
+  header:hover {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  header:hover .headerWrap .logo a {
+    background-image: url(images/logo_B.png);
+  }
+  header:hover .headerWrap nav .gnb > li > a {
+    color: #000;
+  }
+  header:hover .headerWrap .icoMenu .ico1 a {
+    background-position: 0 0;
+  }
+  header:hover .headerWrap .icoMenu .ico2 a {
+    background-position: -20px 0;
+  }
+  header .headerWrap nav .gnb .depth2 li a:hover {
+    color: #0b2c5f;
+  }
+} */
+
+
+
+
+/* 푸터 */
+footer {
+  padding: 60px 0 56px;
+  background-color: #1c1a1b;
+  color: #fff;
+}
+footer .footerWrap {
+  display: flex;
+}
+footer .logo {
+  width: 200px;
+  height: 21px;
+  background: url(images/footer-logo.png) no-repeat;
+}
+footer .footerContents {
+  width: 1000px;
+}
+footer .footerContents .footMenu {
+  font-size: 0;
+}
+footer .footerContents .footMenu li {
+  display: inline-block; /*디폴여백없애기*/
+  vertical-align: middle;
+  font-size: 15px;
+}
+footer .footerContents .footMenu li:not(li:last-child):after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin: 0 20px;
+  background-color: #444;
+  vertical-align: middle;
+}
+footer .footerContents .footMenu li a {
+  font-size: 15px;
+  color: #888;
+}
+footer .footerContents .footMenu li:nth-child(2) a{
+  color: #fff;
+}
+footer .footerContents .companyInfo {
+  font-size: 0;
+  margin-top: 22px;
+}
+footer .footerContents .companyInfo li {
+  display: inline-block;
+  font-size: 15px;
+  margin-right: 40px;
+  margin-bottom: 14px;
+  color: #888;
+}
+footer .footerContents .companyInfo li:last-child {
+  margin-right: 0;
+}
+footer .footerContents .companyInfo li a {
+  font-size: 13px;
+  color: #626262;
+}
+footer .footerContents p {
+  color: #888;
+}
+
+@media (max-width: 490px) {
+  /* 헤더 */
+  header {
+    background-color: #000;
+  }
+  header .headerWrap {
+    margin: 0 20px;
+  }
+  header .headerWrap .logo a {
+    width: 80px;
+  }
+  header .headerWrap nav {
+    display: none !important;
+  }
+  header .headerWrap nav .gnb {
+    display: none !important; 
+  }
+
+  /* 푸터 */
+  footer .footerWrap {
+    flex-wrap: wrap;
+  }
+  footer .footerContents {
+    width: 100%;
+    padding-top: 20px;
+  }
+  footer .footerContents .footMenu li {
+    margin-bottom: 8px;
+  }
+  footer .footerContents .footMenu li:last-child {
+    margin-bottom: 0;
+  }
+  footer .footerContents .footMenu li:not(li:last-child):after {
+    margin: 0 6px;
+  }
+  footer .footerContents .footMenu li a {
+    font-size: 14px;
+  }
+  footer .footerContents .companyInfo {
+    margin-top: 32px;
+  }
+  footer .footerContents .companyInfo li {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  footer .footerContents .companyInfo li a {
+    font-size: 12px;
+  }
+  footer .footerContents p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+}
