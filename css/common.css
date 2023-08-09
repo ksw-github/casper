@@ -42,7 +42,7 @@ header.active .headerWrap nav .gnb .depth2 {
 }
 header.on .headerWrap .logo a,
 header.active .headerWrap .logo a {
-  background-image: url(images/logo_B.png);
+  background-image: url(../images/logo_B.png);
 }
 header.on .headerWrap nav .gnb > li > a,
 header.active .headerWrap nav .gnb > li > a {
@@ -66,7 +66,7 @@ header .headerWrap .logo a {
   display: block;
   width: 115px;
   height: 22px;
-  background-image: url(images/logo.png);
+  background-image: url(../images/logo.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 100% auto; /* 풀프레임 비디오와 같이 풀프 백그라운드 */
@@ -149,7 +149,7 @@ header .headerWrap .icoMenu div a {
   display: block;
   width: 20px;
   height: 24px;
-  background: url(images/ico-header-noti.png) no-repeat;
+  background: url(../images/ico-header-noti.png) no-repeat;
   transition: 0.3s;
 }
 
@@ -207,7 +207,7 @@ footer .footerWrap {
 footer .logo {
   width: 200px;
   height: 21px;
-  background: url(images/footer-logo.png) no-repeat;
+  background: url(../images/footer-logo.png) no-repeat;
 }
 footer .footerContents {
   width: 1000px;

@@ -1,26 +1,26 @@
 @font-face {
-  src: url(font/HyundaiL.ttf);
+  src: url(../font/HyundaiL.ttf);
   font-style: normal;
   font-weight: 200;
   font-family: 'Hyundai'; /*공통이름지어두고 서로 값이 다른 속성으로 불러오기*/
 }
 
 @font-face {
-  src: url(font/HyundaiR.woff2) format("woff2");
+  src: url(../font/HyundaiR.woff2) format("woff2");
   font-style: normal;
   font-weight: 300;
   font-family: 'Hyundai';
 }
 
 @font-face {
-  src: url(font/HyundaiM.ttf);
+  src: url(../font/HyundaiM.ttf);
   font-style: normal;
   font-weight: 500;
   font-family: 'Hyundai';
 }
 
 @font-face {
-  src: url(font/HyundaiB.ttf);
+  src: url(../font/HyundaiB.ttf);
   font-style: normal;
   font-weight: 700;
   font-family: 'Hyundai';

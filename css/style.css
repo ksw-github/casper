@@ -56,7 +56,7 @@ body.popupOn .popup {
 .popup .modal .modalbody .nextBtn::after {
   content: '';
   display: inline-block;
-  background-image: url(images/arrow-all.png);
+  background-image: url(../images/arrow-all.png);
   background-repeat: no-repeat;
   vertical-align: middle;
   width: 9px;
@@ -344,11 +344,11 @@ section.guide .stepList a.more:after {
 }
 .best .slideWrap .prevBtn {
   left: 17%;
-  background: url(images/arrow-left.png);
+  background: url(../images/arrow-left.png);
 }
 .best .slideWrap .nextBtn {
   right: 17%;
-  background: url(images/arrow-right.png);
+  background: url(../images/arrow-right.png);
 }
 .best .slider {}
 .best .slider .slick-slide {}
@@ -496,7 +496,7 @@ section.guide .stepList a.more:after {
   width: 140px;
   height: 140px;
   margin: 30px auto 25px;
-  background: url(images/ico-main-benefit.png);
+  background: url(../images/ico-main-benefit.png);
   background-repeat: no-repeat;
 }
 .benefit .contentsWrap .box:nth-child(1) .img {
@@ -572,7 +572,7 @@ section.guide .stepList a.more:after {
   width: 30px;
   height: 30px;
   margin: 15px auto;
-  background: url(images/ico-main-guide.png);
+  background: url(../images/ico-main-guide.png);
   background-repeat: no-repeat;
 }
 .guide .stepListWrap .stepList li:nth-child(1) .stepIco {
@@ -762,10 +762,10 @@ section.guide .stepList a.more:after {
 .floatingBtm ul .customer {
   margin-bottom: 20px;
   padding-top: 38px;
-  background: url(images/icon-floating.png);
+  background: url(../images/icon-floating.png);
 }
 .floatingBtm ul .topBtn {
-  background: url(images/btn-scroll-top.png);
+  background: url(../images/btn-scroll-top.png);
 }
 .floatingBtm ul .topBtn:hover {
   background-position: -64px 0;
