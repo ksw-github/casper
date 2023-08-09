@@ -86,13 +86,18 @@ body.popupOn .popup {
   align-items: center;
   padding: 0 20px;
 }
-.popup .modal .modalfooter .checkWeek label {}
-.popup .modal .modalfooter .checkWeek label input#ch {}
+.popup .modal .modalfooter .checkWeek label {
+  cursor: pointer;
+}
+.popup .modal .modalfooter .checkWeek label input#ch {
+  cursor: pointer;
+}
 .popup .modal .modalfooter .checkWeek label span {
   color: #666;
   font-weight: 300;
 }
 .popup .modal .modalfooter .close {
+  cursor: pointer;
 }
 /* 영상팝업 */
 ::-webkit-media-controls {
